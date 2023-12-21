@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Mario Game</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div id="modal" class="modal">
+        <div class="button-container">
+            <button id="registar-button">Registar</button>
+            <button id="login-button" class="not-active">Login</button>
+        </div>
+
+        <form onsubmit="onsubmit=registar(event)" id="registar-form">
+            <label for="registar-email">Email</label>
+            <input id="registar-email" value="demo@gmail.com" required>
+            <label for="registar-password">Password</label>
+            <input type="password" value="Password" id="registar-password" required pattern=".{6,}">
+            <label for="registar-username">Username</label>
+            <input id="registar-username" value="User" required>
+            <br/>
+            <input type="submit" value="Sign Up">
+        </form>
+
+        <form onsubmit="" id="login-form" class="hidden">
+            <label for="login-email">Email</label>
+            <input id="login-email" placeholder="demo@gmail.com" required>
+            <label for="login-password">Password</label>
+            <input type="password" placeholder="Password" id="login-password" required pattern=".{6,}">
+            <br/>
+            <input type="submit" value="Sign In">
+        </form>
+    </div>
+
+    <div class="info-container">
+        <button id="logout-button" class="hidden"> Log out </button>
+        <h3 id="username"></h3>
+        <h3 id="highscore-tag" class="hidden">Highscore: <span id="highscore"></span> </h3>
+
+    </div>
+
+
+    <script src="https://kaboomjs.com/legacy/lib/0.5.0/kaboom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/appwrite@11.0.0"></script>
+    <script src="game.js"></script>
+</body>
+</html>
